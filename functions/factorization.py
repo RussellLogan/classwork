@@ -11,12 +11,13 @@ def get_factors(num : int, prime: bool = False) -> List[int]:
         or all factors
 
     Return:
-    List[int]: List of factors.
+        List[int]: List of factors.
     """
     if type(num) is not int:
         raise TypeError("Num must be an int")
     if num <= 0:
         raise ValueError("Num must be greater than 0")
+    
     factors: List[int] = []
     for i in range(1,num+1):
         if num % i == 0:
